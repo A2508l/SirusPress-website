@@ -1,0 +1,13 @@
+#navbarNav{
+    justify-content: flex-end;
+}
+
+.navbar-nav{
+    width: 80%;
+    justify-content: space-evenly;
+}
+
+#navbar{
+    box-shadow: 0 1rem 2rem;
+}
+
