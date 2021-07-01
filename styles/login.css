@@ -10,4 +10,60 @@
 #navbar{
     box-shadow: 0 1rem 2rem;
 }
+ body{
+    background-color: #1d252ced;
+ }
 
+ .form{
+    display: flex;
+    flex-direction: column;
+     
+ }
+
+ .form-content{
+     margin-top: 2%;
+     margin-left: 25%;
+     margin-right: 25%;
+     color: whitesmoke;
+ }
+
+ .form-heading{
+    color: whitesmoke;
+    margin-top: 10%;
+    margin-left: 25%;
+    margin-right: 25%;
+    background-color: rgba(38, 56, 114, 0.705);
+    text-align: center;
+    font-size: 2rem;
+    font-size: 3rem;
+    font-weight: 500;
+}
+#btn{
+    justify-self: center;
+    margin-left: 40%;
+    margin-right: 5%;
+    padding: .5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: .5rem;
+    background-color: rgb(59, 101, 168);
+    border: none;
+}
+
+.mb-3 input{
+    background-color: transparent;
+    border: unset;
+    border-bottom: darkblue solid ;
+    width: 60%;
+    fill: none;
+}
+
+.form-control{
+    background-color: transparent;
+    fill: none;
+    
+}
+
+.bor{
+    border-bottom: floralwhite solid;
+}
