@@ -50,12 +50,20 @@
     border: none;
 }
 
+.mb-3{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
 .mb-3 input{
     background-color: transparent;
     border: unset;
-    border-bottom: darkblue solid ;
+    border-bottom: rgba(8, 8, 53, 0.801) solid ;
     width: 60%;
     fill: none;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .form-control{
