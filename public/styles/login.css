@@ -75,3 +75,9 @@
 .bor{
     border-bottom: floralwhite solid;
 }
+
+.g-signin2 {
+   margin-top: 1rem; 
+   width: 100%;
+   margin-left: 40%;
+}

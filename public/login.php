@@ -1,3 +1,4 @@
+<?php include('./controllers/login.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,6 +11,10 @@
   <!-- CSS only -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="./styles/login.css">
+
+  <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="47139870778-55g0m8lpkk4p2pnhdbiv5j5tfhkurcau.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 
 <body>
@@ -45,56 +50,39 @@
       </div>
     </div>
   </nav>
-  <?php include('./controllers/register.php'); ?>
-
-  <?php echo $success_msg; ?>
-  <?php echo $email_exist; ?>
 
 
-  <form class="form" action="" method="POST">
-    <div class="form-heading" style="margin-top: 5%;">
-      SIGNUP
+  <?php echo $accountNotExistErr; ?>
+  <?php echo $emailPwdErr; ?>
+  <?php echo $email_empty_err; ?>
+  <?php echo $pass_empty_err; ?>
+
+
+  <form class="form" method="POST">
+    <div class="form-heading">
+      LOGIN
     </div>
     <div class="form-content">
       <div class="mb-3">
-        <label for="exampleInputName1" class="form-label">Name</label>
-        <input type="text" class="form-control" id="exampleInputName1" name="name">
-        <?php echo $NameEmptyErr; ?>
-        <?php echo $_NameErr; ?>
-
-      </div>
-      <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+        <input type="email" class="form-control" name="login_email" id="exampleInputEmail1" aria-describedby="emailHelp">
         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-        <?php echo $_emailErr; ?>
-        <?php echo $emailEmptyErr; ?>
-
       </div>
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" name="password">
-        <?php echo $_passwordErr; ?>
-        <?php echo $passwordEmptyErr; ?>
-      </div>
-      <div class="mb-3">
-        <label for="exampleInputNumber1" class="form-label">Number</label>
-        <input type="tel" class="form-control" id="exampleInputNumber1" name="mobilenumber">
-        <?php echo $_mobileErr; ?>
-        <?php echo $mobileEmptyErr; ?>
+        <input type="password" class="form-control" name="login_password" id="exampleInputPassword1">
       </div>
       <br>
       <div class="bor"></div>
       <br>
-      <button type="submit" value="submit" name="signup" class="btn btn-info" id="btn">Sign Up</button><br>
+      <button type="submit" class="btn btn-info" name="login" id="btn">Login</button>
       <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-      <a href="./login.html">Already have an account? Login</a>
+      <a href="">Forgot password?</a>
     </div>
-
   </form>
 
 
-
+  <script src="./scripts/login.js"></script>
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>

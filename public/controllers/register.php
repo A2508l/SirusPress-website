@@ -1,7 +1,7 @@
 <?php
    
     // Database connection
-    include('./conn.php');
+    include('conn.php');
 
    
     
