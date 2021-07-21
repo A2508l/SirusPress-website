@@ -1,5 +1,10 @@
-<?php include('./controllers/conn.php'); ?>
-<?php include('./controllers/login.php'); ?>
+<?php
+
+include('./controllers/conn.php');
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,16 +41,45 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Explore
                         </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#"> Start Reading </a></li>
+                            <li><a class="dropdown-item" href="#"> Start Writting </a></li>
+                            <li><a class="dropdown-item" href="#"> Listen Prodcast </a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item dropdown navbar-light">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Opportunities
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="#">Community</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">My Account</a>
+                    <li class="nav-item dropdown">
+
+                        <?php if ($_SESSION != NULL) { ?>
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <?php echo ($_SESSION['name']); ?>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li>
+                                    <div class="dropdown-item"> <?php echo ($_SESSION['name']); ?> </div>
+                                </li>
+                                <li><a class="dropdown-item" href="./controllers/logout.php"> Logout </a></li>
+                            </ul>
+                        <?php } else { ?>
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <?php echo ("My Account"); ?>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li>
+                                    <div class="dropdown-item"> My Account </div>
+                                </li>
+                                <li><a class="dropdown-item" href="./login.php"> Login </a></li>
+                                <li><a class="dropdown-item" href="./signup.php"> SignUp </a></li>
+                            </ul>
+                        <?php } ?>
+
                     </li>
                 </ul>
             </div>
