@@ -29,6 +29,124 @@
     background-color: #25252d;
  }
 
+ .panels {
+     margin: 3rem 3rem;
+     display: flex;
+     flex-direction: column;
+     position: relative;
+     right: 3rem;
+ }
+
+ .panel {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     margin: 1rem 0;
+     
+ }
+
+ .panel a {
+     text-decoration: none;
+ }
+
+ .panel-desc:hover {
+     transform:scale(1.10);
+     box-shadow: #121216 1rem 1rem 2rem;
+ }
+
+ .panel-desc {
+     background-color: #404f9f;
+     padding: 3rem;
+     max-width: 30rem;
+     margin: 0 1rem;
+ }
+
+ .panel-desc h1 {
+    font-size:3.5rem; 
+    font-weight: 600;
+    color: azure;
+ }
+
+ .panel-image {
+     height: 15rem;
+     margin: 0 1rem;
+ }
+
+ .panel-image img {
+     height: 100%;
+ }
+
+ #center_panel {
+     display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    left: 5rem;
+ }
+
+ #center_panel .panel-image {
+     width: fit-content;
+ }
+
+ #last_panel {
+     position: relative;
+     left: 2rem;
+ }
+
+
+ @media (max-width:1024px) {
+
+    .panels {
+        padding: 0;
+        margin-right: 0;
+        right: 0;
+        margin-left: 0%;
+    }
+
+    .panel {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        background-color: rgba(0, 139, 139, 0.267);
+    }
+
+    #center_panel {
+        display: flex;
+        flex-direction: column-reverse;
+        left: 0;
+        background-color: rgba(127, 255, 212, 0.274);
+    }
+
+    #last_panel {
+        left: 0;
+        background-color: rgba(95, 158, 160, 0.219);
+    }
+
+    .panel-desc h1 {
+        text-align: center;
+    }
+     
+ }
+
+ @media (max-width:450px) {
+     .panel-image {
+         height: 10rem;
+     }
+
+     .panel-desc h1 {
+        text-align: center;
+        font-size:2.5rem; 
+        font-weight: 500;
+    }
+}
+
+@media (max-width:350px) {
+
+    .panel-desc h1 {
+        font-size: 2rem;
+        font-weight: 400;
+    }
+    
+}
 
  .foot {
     background-color: #6a6a6f;
@@ -97,5 +215,11 @@
 
     .foot #right {
         align-self: center;
+    }
+}
+
+@media (max-width:350px) {
+    .foot #center {
+        padding-left: 0%;
     }
 }
