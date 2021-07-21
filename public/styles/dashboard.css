@@ -423,4 +423,9 @@
     }
 }
 
+@media (max-width:350px) {
+    .foot #center {
+        padding-left: 0%;
+    }
+}
  
