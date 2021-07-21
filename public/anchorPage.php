@@ -86,6 +86,40 @@ include('./controllers/conn.php');
     </nav>
 
 
+    <div class="panels">
+        <div class="panel">
+            <a href="#" >
+            <div class="panel-desc">
+                          <h1 >START READING</h1>  
+            </div>
+            </a>
+            <div class="panel-image">
+                            <img src="./images/12.png" alt="reading_image">
+            </div>
+        </div>
+
+        <div class="panel" id="center_panel">
+            <div class="panel-desc" >
+                          <h1>START WRITING</h1>  
+            </div>
+            <div class="panel-image">
+                            <img src="./images/13.png" alt="reading_image">
+            </div>
+        </div>
+
+        <div class="panel" id="last_panel">
+            <div class="panel-desc" >
+                          <h1>LISTEN PODCAST</h1>  
+            </div>
+            <div class="panel-image">
+                            <img src="./images/14.png" alt="reading_image">
+            </div>
+        </div>
+
+    </div>
+
+
+
 
 
 
