@@ -2,7 +2,6 @@
    
     // Database connection
     include('conn.php');
-
     global $wrongPwdErr, $accountNotExistErr, $emailPwdErr, $verificationRequiredErr, $email_empty_err, $pass_empty_err;
 
     if(isset($_POST['login'])) {
@@ -49,13 +48,13 @@
                 $password = password_verify($password_signin, $pass_word);
 
                 
-                    if($email_signin == $email && $password_signin == $password) {
-                       header("Location: ../public/dashboard.php");
-                       
+                    if($email_signin == $email && $password_signin == $password) {                       
                        $_SESSION['id'] = $id;
                        $_SESSION['name'] = $name;
                        $_SESSION['email'] = $email;
                        $_SESSION['mobilenumber'] = $mobilenumber;
+
+                       header("Location: ../public/dashboard.php");
 
                     } else {
                         $emailPwdErr = '<div class="alert alert-danger">

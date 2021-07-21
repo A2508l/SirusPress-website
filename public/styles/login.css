@@ -8,11 +8,30 @@
 }
 
 #navbar{
-    box-shadow: 0 1rem 2rem;
+    box-shadow: 0 1rem 2rem #121216;
 }
- body{
-    background-color: #1d252ced;
+
+#navbarDropdown{
+    color: azure;
+}
+
+#navbarDropdown{
+    color: azure;
+}
+
+.dropdown-menu {
+    background-color: rgba(28, 26, 59, 0.568);
+}
+
+.dropdown-item {
+    color: azure;
+}
+
+
+body{
+    background-color: #25252d;
  }
+
 
  .form{
     display: flex;

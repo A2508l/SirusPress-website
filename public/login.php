@@ -13,17 +13,17 @@
   <link rel="stylesheet" type="text/css" href="./styles/login.css">
 
   <meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="47139870778-55g0m8lpkk4p2pnhdbiv5j5tfhkurcau.apps.googleusercontent.com">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <meta name="google-signin-client_id" content="47139870778-55g0m8lpkk4p2pnhdbiv5j5tfhkurcau.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg  navbar-dark bg-dark" id="navbar">
+  <nav class="navbar navbar-expand-lg  navbar-dark " id="navbar">
     <div class="container-fluid">
       <a class="navbar-brand" href="#" style="color: aliceblue;">
-      <img src="./images/logo.JPG" alt="logo" width="70" height="56" class="d-inline-block align-text-bottom">
+        <img src="./images/logo.JPG" alt="logo" width="70" height="56" class="d-inline-block align-text-bottom">
         Read.Write.Promote
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,16 +35,45 @@
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Explore
             </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#"> Start Reading </a></li>
+              <li><a class="dropdown-item" href="#"> Start Writting </a></li>
+              <li><a class="dropdown-item" href="#"> Listen Prodcast </a></li>
+            </ul>
+          </li>
           <li class="nav-item dropdown navbar-light">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Opportunities
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" href="#">Community</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#">My Account</a>
+          <li class="nav-item dropdown">
+
+            <?php if ($_SESSION != NULL) { ?>
+              <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <?php echo ($_SESSION['name']); ?>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li>
+                  <div class="dropdown-item"> <?php echo ($_SESSION['name']); ?> </div>
+                </li>
+                <li><a class="dropdown-item" href="./controllers/logout.php"> Logout </a></li>
+              </ul>
+            <?php } else { ?>
+              <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <?php echo ("My Account"); ?>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li>
+                  <div class="dropdown-item"> My Account </div>
+                </li>
+                <li><a class="dropdown-item" href="./login.php"> Login </a></li>
+                <li><a class="dropdown-item" href="./signup.php"> SignUp </a></li>
+              </ul>
+            <?php } ?>
+
           </li>
         </ul>
       </div>
