@@ -16,7 +16,7 @@ include('./controllers/conn.php');
 
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./styles/anchor_page.css">
+    <link rel="stylesheet" type="text/css" href="./styles/community.css">
 
     <!-- <meta name="google-signin-client_id" content="47139870778-55g0m8lpkk4p2pnhdbiv5j5tfhkurcau.apps.googleusercontent.com">
   <script src="https://apis.google.com/js/platform.js" async defer></script> -->
@@ -86,41 +86,31 @@ include('./controllers/conn.php');
     </nav>
 
 
-    <div class="panels">
-        <div class="panel">
-            <a href="#" >
-            <div class="panel-desc">
-                          <h1 >START READING</h1>  
+    <section class="hero_main">
+        <div class="hero_image">
+            <img src="./images/15.png" alt="Community_image">
+        </div>
+        <div class="hero_desc">
+            <div class="banner">
+                <h1>JOIN OUR COMMUNITY</h1>
             </div>
-            </a>
-            <div class="panel-image">
-                            <img src="./images/12.png" alt="reading_image">
+            <div class="bor1"></div>
+            <div class="bor2"></div>
+            <div class="desc_text">
+                <p>If you love words and keen about exploring, improving, reviewing the writer
+                    in yourself, you are at the right platform.<br>
+                    Join our community today for best of learning and perceiving.
+                    Realizing relief and out of the sorrows and doubt when one keeps writing and
+                    exploring, audience keeps praising for the effort and wise creativity.</p>
+                    <br>
+                    <br>
+                    <div class="join_btn">
+                    <h3>Become a member at just ***/-</h3>
+                    <button type="button" class="btn btn-primary text-wrap">Join</button>
+                    </div>
             </div>
         </div>
-
-        <div class="panel" id="center_panel">
-            <div class="panel-desc" >
-                          <h1>START WRITING</h1>  
-            </div>
-            <div class="panel-image">
-                            <img src="./images/13.png" alt="reading_image">
-            </div>
-        </div>
-
-        <div class="panel" id="last_panel">
-            <div class="panel-desc" >
-                          <h1>LISTEN PODCAST</h1>  
-            </div>
-            <div class="panel-image">
-                            <img src="./images/14.png" alt="reading_image">
-            </div>
-        </div>
-
-    </div>
-
-
-
-
+    </section>
 
 
 
@@ -160,7 +150,7 @@ include('./controllers/conn.php');
 
 
 
-    <script src="./scripts/dashboard.js"></script>
+
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
