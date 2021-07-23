@@ -45,7 +45,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#">Community</a>
+            <a class="nav-link active" href="./community.php">Community</a>
           </li>
           <li class="nav-item dropdown">
 
