@@ -193,12 +193,12 @@
     
     .trending-stories .carousel-inner .carousel-item-end.active,
     .trending-stories .carousel-inner .carousel-item-next {
-      transform: translateX(50%);
+      transform: translateX(33.3%);
     }
     
     .trending-stories .carousel-inner .carousel-item-start.active, 
     .trending-stories .carousel-inner .carousel-item-prev {
-      transform: translateX(-50%);
+      transform: translateX(-33.3%);
     }
 
     .trending-stories .carousel-control-prev {
