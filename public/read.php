@@ -16,7 +16,8 @@ include('./controllers/conn.php');
 
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./styles/podcast.css">
+    <link rel="stylesheet" type="text/css" href="./styles/read.css">
+    <!-- <script type="text/javascript" src="/public/scripts/dashboard.js"></script> -->
 
     <!-- <meta name="google-signin-client_id" content="47139870778-55g0m8lpkk4p2pnhdbiv5j5tfhkurcau.apps.googleusercontent.com">
   <script src="https://apis.google.com/js/platform.js" async defer></script> -->
@@ -37,7 +38,7 @@ include('./controllers/conn.php');
             <div class="collapse navbar-collapse " id="navbarNav">
                 <ul class="navbar-nav ">
                     <li class="nav-item dropdown navbar-dark">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="./community.php" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Explore
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -52,7 +53,7 @@ include('./controllers/conn.php');
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="./community.php">Community</a>
+                        <a class="nav-link active" href="#">Community</a>
                     </li>
                     <li class="nav-item dropdown">
 
@@ -86,16 +87,12 @@ include('./controllers/conn.php');
     </nav>
 
 
-
     <div class="heading">
-        <h1>PODCAST</h1>
+        <h1>READ</h1>
     </div>
 
-
-
-
-
-        
+    <div class="poems">
+        <h1 class="text-center" id="heading">Poems</h1>
         <div class="container text-center my-3">
             <div class="row mx-auto my-auto justify-content-center">
                 <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -106,33 +103,10 @@ include('./controllers/conn.php');
                                     <div class="card-img">
                                         <img src="./images/6.JPG" class="img-fluid">
                                     </div>
-                                    <div class="podcast_description">
-                                        <h5 class="podcast_title">Podcast Name</h5>
+                                    <div class="poem_description">
+                                        <h5 class="poem_title">Name of the book</h5>
                                         <div class="bor"></div>
-                                        <p class="podcast_desc">Love, affection, bond, friends</p>
-                                    </div>
-                                </div>
-
-
-                                <div class="card">
-                                    <div class="card-img">
-                                        <img src="./images/6.JPG" class="img-fluid">
-                                    </div>
-                                    <div class="podcast_description">
-                                        <h5 class="podcast_title">Podcast Name</h5>
-                                        <div class="bor"></div>
-                                        <p class="podcast_desc">Love, affection, bond, friends</p>
-                                    </div>
-                                </div>
-
-                                <div class="card">
-                                    <div class="card-img">
-                                        <img src="./images/6.JPG" class="img-fluid">
-                                    </div>
-                                    <div class="podcast_description">
-                                        <h5 class="podcast_title">Podcast Name</h5>
-                                        <div class="bor"></div>
-                                        <p class="podcast_desc">Love, affection, bond, friends</p>
+                                        <p class="poem_desc">Love, affection, bond, friends</p>
                                     </div>
                                 </div>
                             </div>
@@ -143,32 +117,10 @@ include('./controllers/conn.php');
                                     <div class="card-img">
                                         <img src="./images/6.JPG" class="img-fluid">
                                     </div>
-                                    <div class="podcast_description">
-                                        <h5 class="podcast_title">Podcast Name</h5>
+                                    <div class="poem_description">
+                                        <h5 class="poem_title">Name of the book</h5>
                                         <div class="bor"></div>
-                                        <p class="podcast_desc">Love, affection, bond, friends</p>
-                                    </div>
-                                </div>
-
-                                <div class="card">
-                                    <div class="card-img">
-                                        <img src="./images/6.JPG" class="img-fluid">
-                                    </div>
-                                    <div class="podcast_description">
-                                        <h5 class="podcast_title">Podcast Name</h5>
-                                        <div class="bor"></div>
-                                        <p class="podcast_desc">Love, affection, bond, friends</p>
-                                    </div>
-                                </div>
-
-                                <div class="card">
-                                    <div class="card-img">
-                                        <img src="./images/6.JPG" class="img-fluid">
-                                    </div>
-                                    <div class="podcast_description">
-                                        <h5 class="podcast_title">Podcast Name</h5>
-                                        <div class="bor"></div>
-                                        <p class="podcast_desc">Love, affection, bond, friends</p>
+                                        <p class="poem_desc">Love, affection, bond, friends</p>
                                     </div>
                                 </div>
                             </div>
@@ -179,32 +131,10 @@ include('./controllers/conn.php');
                                     <div class="card-img">
                                         <img src="./images/6.JPG" class="img-fluid">
                                     </div>
-                                    <div class="podcast_description">
-                                        <h5 class="podcast_title">Podcast Name</h5>
+                                    <div class="poem_description">
+                                        <h5 class="poem_title">Name of the book</h5>
                                         <div class="bor"></div>
-                                        <p class="podcast_desc">Love, affection, bond, friends</p>
-                                    </div>
-                                </div>
-
-                                <div class="card">
-                                    <div class="card-img">
-                                        <img src="./images/6.JPG" class="img-fluid">
-                                    </div>
-                                    <div class="podcast_description">
-                                        <h5 class="podcast_title">Podcast Name</h5>
-                                        <div class="bor"></div>
-                                        <p class="podcast_desc">Love, affection, bond, friends</p>
-                                    </div>
-                                </div>
-
-                                <div class="card">
-                                    <div class="card-img">
-                                        <img src="./images/6.JPG" class="img-fluid">
-                                    </div>
-                                    <div class="podcast_description">
-                                        <h5 class="podcast_title">Podcast Name</h5>
-                                        <div class="bor"></div>
-                                        <p class="podcast_desc">Love, affection, bond, friends</p>
+                                        <p class="poem_desc">Love, affection, bond, friends</p>
                                     </div>
                                 </div>
                             </div>
@@ -215,32 +145,10 @@ include('./controllers/conn.php');
                                     <div class="card-img">
                                         <img src="./images/6.JPG" class="img-fluid">
                                     </div>
-                                    <div class="podcast_description">
-                                        <h5 class="podcast_title">Podcast Name</h5>
+                                    <div class="poem_description">
+                                        <h5 class="poem_title">Name of the book</h5>
                                         <div class="bor"></div>
-                                        <p class="podcast_desc">Love, affection, bond, friends</p>
-                                    </div>
-                                </div>
-
-                                <div class="card">
-                                    <div class="card-img">
-                                        <img src="./images/6.JPG" class="img-fluid">
-                                    </div>
-                                    <div class="podcast_description">
-                                        <h5 class="podcast_title">Podcast Name</h5>
-                                        <div class="bor"></div>
-                                        <p class="podcast_desc">Love, affection, bond, friends</p>
-                                    </div>
-                                </div>
-
-                                <div class="card">
-                                    <div class="card-img">
-                                        <img src="./images/6.JPG" class="img-fluid">
-                                    </div>
-                                    <div class="podcast_description">
-                                        <h5 class="podcast_title">Podcast Name</h5>
-                                        <div class="bor"></div>
-                                        <p class="podcast_desc">Love, affection, bond, friends</p>
+                                        <p class="poem_desc">Love, affection, bond, friends</p>
                                     </div>
                                 </div>
                             </div>
@@ -251,30 +159,10 @@ include('./controllers/conn.php');
                                     <div class="card-img">
                                         <img src="./images/6.JPG" class="img-fluid">
                                     </div>
-                                    <div class="podcast_description">
-                                        <h5 class="podcast_title">Podcast Name</h5>
+                                    <div class="poem_description">
+                                        <h5 class="poem_title">Name of the book</h5>
                                         <div class="bor"></div>
-                                        <p class="podcast_desc">Love, affection, bond, friends</p>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-img">
-                                        <img src="./images/6.JPG" class="img-fluid">
-                                    </div>
-                                    <div class="podcast_description">
-                                        <h5 class="podcast_title">Podcast Name</h5>
-                                        <div class="bor"></div>
-                                        <p class="podcast_desc">Love, affection, bond, friends</p>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-img">
-                                        <img src="./images/6.JPG" class="img-fluid">
-                                    </div>
-                                    <div class="podcast_description">
-                                        <h5 class="podcast_title">Podcast Name</h5>
-                                        <div class="bor"></div>
-                                        <p class="podcast_desc">Love, affection, bond, friends</p>
+                                        <p class="poem_desc">Love, affection, bond, friends</p>
                                     </div>
                                 </div>
                             </div>
@@ -285,32 +173,10 @@ include('./controllers/conn.php');
                                     <div class="card-img">
                                         <img src="./images/6.JPG" class="img-fluid">
                                     </div>
-                                    <div class="podcast_description">
-                                        <h5 class="podcast_title">Podcast Name</h5>
+                                    <div class="poem_description">
+                                        <h5 class="poem_title">Name of the book</h5>
                                         <div class="bor"></div>
-                                        <p class="podcast_desc">Love, affection, bond, friends</p>
-                                    </div>
-                                </div>
-
-                                <div class="card">
-                                    <div class="card-img">
-                                        <img src="./images/6.JPG" class="img-fluid">
-                                    </div>
-                                    <div class="podcast_description">
-                                        <h5 class="podcast_title">Podcast Name</h5>
-                                        <div class="bor"></div>
-                                        <p class="podcast_desc">Love, affection, bond, friends</p>
-                                    </div>
-                                </div>
-
-                                <div class="card">
-                                    <div class="card-img">
-                                        <img src="./images/6.JPG" class="img-fluid">
-                                    </div>
-                                    <div class="podcast_description">
-                                        <h5 class="podcast_title">Podcast Name</h5>
-                                        <div class="bor"></div>
-                                        <p class="podcast_desc">Love, affection, bond, friends</p>
+                                        <p class="poem_desc">Love, affection, bond, friends</p>
                                     </div>
                                 </div>
                             </div>
@@ -325,10 +191,218 @@ include('./controllers/conn.php');
                 </div>
             </div>
         </div>
-   
+    </div>
 
 
 
+
+    <div class="poems">
+        <h1 class="text-center" id="heading">Short Stories</h1>
+        <div class="container text-center my-3">
+            <div class="row mx-auto my-auto justify-content-center">
+                <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="./images/6.JPG" class="img-fluid">
+                                    </div>
+                                    <div class="poem_description">
+                                        <h5 class="poem_title">Name of the book</h5>
+                                        <div class="bor"></div>
+                                        <p class="poem_desc">Love, affection, bond, friends</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="./images/6.JPG" class="img-fluid">
+                                    </div>
+                                    <div class="poem_description">
+                                        <h5 class="poem_title">Name of the book</h5>
+                                        <div class="bor"></div>
+                                        <p class="poem_desc">Love, affection, bond, friends</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="./images/6.JPG" class="img-fluid">
+                                    </div>
+                                    <div class="poem_description">
+                                        <h5 class="poem_title">Name of the book</h5>
+                                        <div class="bor"></div>
+                                        <p class="poem_desc">Love, affection, bond, friends</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="./images/6.JPG" class="img-fluid">
+                                    </div>
+                                    <div class="poem_description">
+                                        <h5 class="poem_title">Name of the book</h5>
+                                        <div class="bor"></div>
+                                        <p class="poem_desc">Love, affection, bond, friends</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="./images/6.JPG" class="img-fluid">
+                                    </div>
+                                    <div class="poem_description">
+                                        <h5 class="poem_title">Name of the book</h5>
+                                        <div class="bor"></div>
+                                        <p class="poem_desc">Love, affection, bond, friends</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="./images/6.JPG" class="img-fluid">
+                                    </div>
+                                    <div class="poem_description">
+                                        <h5 class="poem_title">Name of the book</h5>
+                                        <div class="bor"></div>
+                                        <p class="poem_desc">Love, affection, bond, friends</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true" id="cont-prev"></span>
+                    </a>
+                    <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true" id="cont-next"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="poems">
+        <h1 class="text-center" id="heading">Novels</h1>
+        <div class="container text-center my-3">
+            <div class="row mx-auto my-auto justify-content-center">
+                <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="./images/6.JPG" class="img-fluid">
+                                    </div>
+                                    <div class="poem_description">
+                                        <h5 class="poem_title">Name of the book</h5>
+                                        <div class="bor"></div>
+                                        <p class="poem_desc">Love, affection, bond, friends</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="./images/6.JPG" class="img-fluid">
+                                    </div>
+                                    <div class="poem_description">
+                                        <h5 class="poem_title">Name of the book</h5>
+                                        <div class="bor"></div>
+                                        <p class="poem_desc">Love, affection, bond, friends</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="./images/6.JPG" class="img-fluid">
+                                    </div>
+                                    <div class="poem_description">
+                                        <h5 class="poem_title">Name of the book</h5>
+                                        <div class="bor"></div>
+                                        <p class="poem_desc">Love, affection, bond, friends</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="./images/6.JPG" class="img-fluid">
+                                    </div>
+                                    <div class="poem_description">
+                                        <h5 class="poem_title">Name of the book</h5>
+                                        <div class="bor"></div>
+                                        <p class="poem_desc">Love, affection, bond, friends</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="./images/6.JPG" class="img-fluid">
+                                    </div>
+                                    <div class="poem_description">
+                                        <h5 class="poem_title">Name of the book</h5>
+                                        <div class="bor"></div>
+                                        <p class="poem_desc">Love, affection, bond, friends</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="./images/6.JPG" class="img-fluid">
+                                    </div>
+                                    <div class="poem_description">
+                                        <h5 class="poem_title">Name of the book</h5>
+                                        <div class="bor"></div>
+                                        <p class="poem_desc">Love, affection, bond, friends</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true" id="cont-prev"></span>
+                    </a>
+                    <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true" id="cont-next"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -368,8 +442,8 @@ include('./controllers/conn.php');
     </footer>
 
 
-    <script src="./scripts/podcast.js"></script>
 
+    <script src="./scripts/read.js"></script>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
