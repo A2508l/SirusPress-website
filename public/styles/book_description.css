@@ -1,0 +1,254 @@
+#navbarNav{
+    justify-content: flex-end;
+}
+
+.navbar-nav{
+    width: 80%;
+    justify-content: space-evenly;
+}
+
+#navbar{
+    box-shadow: 0 2rem 1.5rem #121216;    
+    background-color: #25252d;
+    
+}
+
+#navbarDropdown{
+    color: azure;
+}
+
+.dropdown-menu {
+    background-color: rgba(28, 26, 59, 0.568);
+}
+
+.dropdown-item {
+    color: azure;
+}
+
+ body{
+    background-color: #25252d;
+ }
+
+
+
+
+ .main_section {
+     display: flex;
+    color: aliceblue;
+    margin: 2rem;
+ }
+
+ .left_panel {
+     width: 45%;
+ }
+
+ .left_panel_heading {
+     color: #5773ff;
+ }
+
+ .card {
+     width: 80%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     background-color: transparent;
+     border: 0;
+ }
+
+ .card-img {
+     width: 80%;
+ }
+
+ .card-img img {
+     width: 100%;
+ }
+
+.poem_description {
+    display: flex;
+    flex-direction: column;
+}
+
+.poem_title {
+    text-align: center;
+}
+
+.bor {
+    border-top: #5773ff solid .2rem;
+    
+}
+
+.poem_desc {
+    text-align: center;
+}
+
+ .right_panel {
+     width: 55%;
+     background-color: transparent;
+     color: #f4f2f1;
+     padding-right: 3rem;
+ }
+
+ .right_panel_body {
+     display: flex;
+     flex-direction: column;
+     
+ }
+
+ .right_panel_body_desc {
+     display: flex;
+     align-content: center;
+     border-bottom: solid #b1b1b4 .2rem;
+     width: 90%;
+     flex-wrap: nowrap;
+     
+ }
+
+ .right_panel_body_desc_key {
+     margin-left: 4rem;
+     min-width: 35%;
+ }
+
+ .right_panel_body_desc_key h3 {
+     font-size: 1.2rem;
+ }
+
+ .right_panel_body_desc_value {
+     left: 15rem;
+     font-size: 1.2rem;
+     
+ }
+
+
+ .buttons {
+     display: flex;
+     margin-right: 4rem;
+     justify-content: space-evenly;
+ }
+
+ .buttons button {
+     border-radius: .8rem;
+     text-align: center;
+ }
+
+
+
+ @media (max-width : 1150px) {
+
+    .right_panel_body_desc {
+        width: 100%;
+    }
+     
+ }
+
+ @media (max-width : 750px) {
+
+    .main_section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .right_panel {
+        width: 100%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        margin-top: 3rem;
+    }
+
+    .right_panel_heading {
+        text-align: center;
+    }
+
+    .left_panel {
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .right_panel_body_desc {
+        width: 100%;
+    }
+
+    .poem_description {
+        display: none;
+    }
+     
+ }
+
+
+
+ .foot {
+    background-color: #6a6a6f;
+    display: flex;
+    flex-direction: row;
+    margin-top: 3rem;
+    justify-content: space-around;
+    padding:1rem;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    clear: both;
+}
+
+.foot #left {
+    padding-right: 2rem;
+}
+
+.foot #left,
+.foot #center,
+.foot #right {
+    padding: 3rem;
+    padding-bottom: 1rem;
+}
+
+.foot h1 {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: azure;
+}
+
+.foot .icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.foot .form-control, 
+.foot .form-control:focus, 
+.foot .form-control:active {
+    background: transparent;
+    border: none;
+    border-bottom: oldlace solid .1rem;
+    border-radius: 0;
+    width: min-content;
+    padding: .1rem;
+    margin: .3rem;
+}
+
+.foot .col-mb-6 {
+    display: flex;
+    flex-direction: row;
+       
+}
+
+@media (max-width:992px) {
+    .foot {
+        background-color: #6a6a6f;
+        display: flex;
+        flex-direction: column;
+        margin-top: 3rem;
+        justify-content: space-around;
+        padding:1rem;
+    }
+
+    .foot #center {
+        border-top: solid azure .1rem;
+        border-bottom: solid azure .1rem;
+    }
+
+    .foot #right {
+        align-self: center;
+    }
+}
