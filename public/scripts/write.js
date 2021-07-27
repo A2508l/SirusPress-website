@@ -49,3 +49,19 @@ function printDoc() {
   oPrntWin.document.write("<!doctype html><html><head><title>Print<\/title><\/head><body onload=\"print();\">" + oDoc.innerHTML + "<\/body><\/html>");
   oPrntWin.document.close();
 }
+
+
+
+function fetch_textbox_content() {
+  var content = document.getElementById("textBox").innerHTML ;
+  document.getElementById("content").value = content;
+}
+
+function mypopup_open() {
+  document.getElementById("popup_form").style.display = "block";
+  fetch_textbox_content();
+}
+
+function mypopup_close() {
+  document.getElementById("popup_form").style.display = "none";
+}
