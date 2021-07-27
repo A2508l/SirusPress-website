@@ -1,7 +1,7 @@
 <?php
 
 include('./controllers/conn.php');
-if ($_SESSION != NULL) {
+if ($_SESSION == NULL) {
     header("Location: ./login.php");
 }
 
@@ -98,16 +98,16 @@ if ($_SESSION != NULL) {
     <div class="content-panel">
 
         <div class="side-panel">
-            <h3>Currently Reading</h3>
+            <h3>Currently Writing</h3>
             <div class="card">
                 <div class="card-img">
                     <img src="./images/6.JPG" class="img-fluid">
                 </div>
                 <div class="book_description">
-                <h5 class="book_title" >Name of the book</h5>
-                <div class="bor"></div>
-                <p class="book_desc" >Keywords</p>
-            </div>
+                    <h5 class="book_title">Name of the book</h5>
+                    <div class="bor"></div>
+                    <p class="book_desc">Keywords</p>
+                </div>
             </div>
             <h3>Archive</h3>
             <div class="card">
@@ -115,50 +115,50 @@ if ($_SESSION != NULL) {
                     <img src="./images/6.JPG" class="img-fluid">
                 </div>
                 <div class="book_description">
-                <h5 class="book_title" >Name of the book</h5>
-                <div class="bor"></div>
-                <p class="book_desc" >Keywords</p>
-            </div>
+                    <h5 class="book_title">Name of the book</h5>
+                    <div class="bor"></div>
+                    <p class="book_desc">Keywords</p>
+                </div>
             </div>
             <div class="card">
                 <div class="card-img">
                     <img src="./images/6.JPG" class="img-fluid">
                 </div>
                 <div class="book_description">
-                <h5 class="book_title" >Name of the book</h5>
-                <div class="bor"></div>
-                <p class="book_desc" >Keywords</p>
-            </div>
+                    <h5 class="book_title">Name of the book</h5>
+                    <div class="bor"></div>
+                    <p class="book_desc">Keywords</p>
+                </div>
             </div>
             <div class="card">
                 <div class="card-img">
                     <img src="./images/6.JPG" class="img-fluid">
                 </div>
                 <div class="book_description">
-                <h5 class="book_title" >Name of the book</h5>
-                <div class="bor"></div>
-                <p class="book_desc" >Keywords</p>
-            </div>
+                    <h5 class="book_title">Name of the book</h5>
+                    <div class="bor"></div>
+                    <p class="book_desc">Keywords</p>
+                </div>
             </div>
             <div class="card">
                 <div class="card-img">
                     <img src="./images/6.JPG" class="img-fluid">
                 </div>
                 <div class="book_description">
-                <h5 class="book_title" >Name of the book</h5>
-                <div class="bor"></div>
-                <p class="book_desc" >Keywords</p>
-            </div>
+                    <h5 class="book_title">Name of the book</h5>
+                    <div class="bor"></div>
+                    <p class="book_desc">Keywords</p>
+                </div>
             </div>
             <div class="card">
                 <div class="card-img">
                     <img src="./images/6.JPG" class="img-fluid">
                 </div>
                 <div class="book_description">
-                <h5 class="book_title" >Name of the book</h5>
-                <div class="bor"></div>
-                <p class="book_desc" >Keywords</p>
-            </div>
+                    <h5 class="book_title">Name of the book</h5>
+                    <div class="bor"></div>
+                    <p class="book_desc">Keywords</p>
+                </div>
             </div>
 
         </div>
@@ -166,7 +166,7 @@ if ($_SESSION != NULL) {
 
 
         <div class="text_editor">
-            <form name="compForm" method="post" action="sample.php" onsubmit="if(validateMode()){this.myDoc.value=oDoc.innerHTML;return true;}return false;">
+            <form name="compForm" method="post"  onsubmit="if(validateMode()){this.myDoc.value=oDoc.innerHTML;return true;}return false;">
                 <input type="hidden" name="myDoc">
                 <div id="toolBar1">
                     <select onchange="formatDoc('formatblock',this[this.selectedIndex].value);this.selectedIndex=0;">
@@ -237,10 +237,54 @@ if ($_SESSION != NULL) {
                     <p>Lorem ipsum</p>
                 </div>
                 <p id="editMode"><input type="none" name="switchMode" id="switchBox" onchange="setDocMode(this.checked);" style="display: none;"> </p>
-                <p><input type="submit" value="Save" /></p>
-                <p><input type="submit" value="Publish" /></p>
+                <p><input type="button" onclick="mypopup_open()" value="SAVE"></p>
+               
             </form>
         </div>
+    </div>
+
+    <div class="popup_form" id="popup_form">
+
+        <form class="form" method="POST">
+            <div class="form-content">
+                <div class="mb-3">
+                    <label for="Book_Name" class="form-label">Book Name:</label>
+                    <input type="text" class="form-control" name="Book_Name" id="Book_Name" aria-describedby="BookName" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="Author Name" class="form-label">Author Name:</label>
+                    <input type="text" class="form-control" name="Name" id="Author_Name" aria-describedby="AuthorName" value="<?php echo ($_SESSION['name']); ?>" readonly>
+                </div>
+
+                <div class="mb-3">
+                    <label for="Genre" class="form-label">Genre:</label>
+                    <input type="text" class="form-control" name="genre" id="genre" aria-describedby="Genre">
+                </div>
+
+                <div class="mb-3">
+                    <label for="category" class="form-label">category:</label>
+                    <select class="" id="category" name="category">
+                        <option value="poem">Poem</option>
+                        <option value="story">Story</option>
+                        <option value="novel">Novel</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                <label for="publish" class="form-label"> Publish </label>
+                <input type="checkbox" id="publish" name="publish" value="publish">
+
+                </div>
+
+                <input type="text" class="form-control" name="content" id="content" value="" hidden>
+
+                <button type="submit" class="btn btn-info" name="save" id="btn">Save</button>
+                <button type="button" class="btn btn-danger" name="close" id="btn" onclick="mypopup_close()">Close</button>
+
+            </div>
+        </form>
+
     </div>
 
 
