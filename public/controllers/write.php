@@ -42,7 +42,7 @@
             }
             else{
 
-                $author_name = ;
+                $author_name ;
                 $author_id;
                 $book_id;
                 $genre;

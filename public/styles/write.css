@@ -52,6 +52,7 @@
 #textBox {
     background-color:rgba(218, 218, 218, 0.993);
     fill: none;
+    overflow-x: hidden;
 }
 
 .heading {
@@ -114,6 +115,20 @@
     background-color: rgba(196,205,250,255);
     padding: 1rem;
 }
+
+#textBox::-webkit-scrollbar {
+    width: 10px;               /* width of the entire scrollbar */
+  }
+  
+#textBox::-webkit-scrollbar-track {
+    background: rgb(26, 25, 24);        /* color of the tracking area */
+  }
+  
+#textBox::-webkit-scrollbar-thumb {
+    background-color: rgb(247, 247, 247);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid rgb(161, 154, 139);  /* creates padding around scroll thumb */
+  }
 
 .side-panel::-webkit-scrollbar {
     width: 10px;               /* width of the entire scrollbar */
@@ -183,7 +198,33 @@
     left: 20%;
     padding: 3rem;  
     display: none;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+   
+
 }
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+
+  
+
+  .error_popup{
+      background-color: rgba(179, 58, 58, 0.719);
+    position: absolute;
+    top: 10px;  
+    display: none;  
+    padding:5px;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+   }
 
 
 .popup_form .mb-3 {
