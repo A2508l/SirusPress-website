@@ -50,6 +50,13 @@ function printDoc() {
   oPrntWin.document.close();
 }
 
+function clean() {
+  if(validateMode()&&confirm('Are you sure?')){  
+document.getElementById("textBox").innerHTML= "<p>Lorem Ipsum</p>" ;
+}
+
+}
+
 
 
 function fetch_textbox_content() {
@@ -64,4 +71,13 @@ function mypopup_open() {
 
 function mypopup_close() {
   document.getElementById("popup_form").style.display = "none";
+}
+
+function Error_popup () {
+  document.getElementById("error_popup").style.display = "block";
+  setTimeout(Error_popup_hide, 3000);
+}
+
+function Error_popup_hide () {
+  document.getElementById("error_popup").style.display = "none";
 }
