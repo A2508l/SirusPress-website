@@ -95,6 +95,11 @@ if ($_SESSION == NULL) {
         <h1>WRITE</h1>
     </div>
 
+    <?php
+    $sql = "SELECT * FROM writings where author_id = '{$_SESSION['id']}'";
+    $result = mysqli_query($connection,$sql);
+    ?>
+
 
     <div class="content-panel">
 
@@ -111,56 +116,22 @@ if ($_SESSION == NULL) {
                 </div>
             </div>
             <h3>Archive</h3>
+
+            <?php 
+                    while($rows=mysqli_fetch_assoc($result)){
+                ?>
+
             <div class="card">
                 <div class="card-img">
                     <img src="./images/6.JPG" class="img-fluid">
                 </div>
                 <div class="book_description">
-                    <h5 class="book_title">Name of the book</h5>
+                    <h5 class="book_title"><?php echo ($rows['book_name']); ?></h5>
                     <div class="bor"></div>
-                    <p class="book_desc">Keywords</p>
+                    <p class="book_desc"><?php echo ($rows['genre']); ?></p>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-img">
-                    <img src="./images/6.JPG" class="img-fluid">
-                </div>
-                <div class="book_description">
-                    <h5 class="book_title">Name of the book</h5>
-                    <div class="bor"></div>
-                    <p class="book_desc">Keywords</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <img src="./images/6.JPG" class="img-fluid">
-                </div>
-                <div class="book_description">
-                    <h5 class="book_title">Name of the book</h5>
-                    <div class="bor"></div>
-                    <p class="book_desc">Keywords</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <img src="./images/6.JPG" class="img-fluid">
-                </div>
-                <div class="book_description">
-                    <h5 class="book_title">Name of the book</h5>
-                    <div class="bor"></div>
-                    <p class="book_desc">Keywords</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <img src="./images/6.JPG" class="img-fluid">
-                </div>
-                <div class="book_description">
-                    <h5 class="book_title">Name of the book</h5>
-                    <div class="bor"></div>
-                    <p class="book_desc">Keywords</p>
-                </div>
-            </div>
+        <?php }  ?>
 
         </div>
 

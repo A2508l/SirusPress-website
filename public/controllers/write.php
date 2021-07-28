@@ -42,13 +42,24 @@
             }
             else{
 
-                $author_name ;
-                $author_id;
-                $book_id;
-                $genre;
-                $category;
-                $publish;
+                $author_name = $_SESSION['name'] ;
+                $author_id = $_SESSION['id'];
+                $genre = $_POST['genre'];
+                $category = $_POST['category'];
+                if(!empty($_POST['publish'])){
+                    $publish = 1;
+                }
+                else {
+                    $publish = 0;
+                }
+                $content = $_POST['content'];
 
+                $sql = " INSERT INTO writings ( author_id,book_name,author_name,genre,category,publish,content) VALUES ('{$author_id}', '{$book_name}', '{$author_name}', '{$genre}', '{$category}', '{$publish}', '{$content}')";
+                $query = mysqli_query($connection, $sql);
+
+                if(!$query){
+                    die("MySQL query failed!" . mysqli_error($connection));
+                } 
 
             }
     }
