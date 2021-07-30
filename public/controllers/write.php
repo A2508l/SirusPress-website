@@ -20,7 +20,7 @@
         
 
         $book_name = $_POST['Book_Name'];
-        
+        echo($book_name);
          // Query if book exists in db with other author
          $sql = "SELECT * From writings WHERE book_name = '{$book_name}' ";
          $query = mysqli_query($connection, $sql);
