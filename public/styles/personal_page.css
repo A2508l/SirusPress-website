@@ -212,6 +212,7 @@
     .foot #center {
         border-top: solid azure .1rem;
         border-bottom: solid azure .1rem;
+        overflow-x: hidden;
     }
 
     .foot #right {

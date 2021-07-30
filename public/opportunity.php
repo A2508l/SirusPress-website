@@ -6,6 +6,7 @@ include('./controllers/conn.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,6 +18,7 @@ include('./controllers/conn.php');
     <script type="text/javascript" src="/public/scripts/opportunity.js"></script>
 
 </head>
+
 <body>
 
     <!-- Navbar -->
@@ -117,7 +119,7 @@ include('./controllers/conn.php');
                     <img src="./images/16.JPG" class="img-fluid" alt=".3.">
                 </div>
                 <div class="panel-title">
-                    Publish Poster 
+                    Publish Poster
                 </div>
             </div>
         </div>
@@ -127,8 +129,12 @@ include('./controllers/conn.php');
 
     <div class="contest_panel">
         <div class="headings">
-            <div class="main_heading"><h1>Ongoing Contest</h1></div>
-            <div class="sub_heading"><h2>"Contest Name"</h2></div>
+            <div class="main_heading">
+                <h1>Ongoing Contest</h1>
+            </div>
+            <div class="sub_heading">
+                <h2>"Contest Name"</h2>
+            </div>
         </div>
         <br>
         <br>
@@ -170,23 +176,25 @@ include('./controllers/conn.php');
         <button type="button" class="btn btn-primary text-wrap">
             Participate
         </button>
-        
+
     </div>
-    
+
+    <!-- Upcoming Contest Panel -->
+
     <div class="upcoming_contest_panel">
         <div class="heading">
             Upcoming Contest
         </div>
         <div class="upcoming_contest_dashboard">
-        <div class="cards">
+            <div class="cards">
                 <div class="card-img">
                     <img src="./images/6.JPG" class="img-fluid">
                 </div>
                 <div class="book_description">
-                <h5 class="book_title" >Name of the book</h5>
-                <div class="bor"></div>
-                <p class="book_desc" >Keywords</p>
-            </div>
+                    <h5 class="book_title">Name of the book</h5>
+                    <div class="bor"></div>
+                    <p class="book_desc">Keywords</p>
+                </div>
             </div>
 
             <div class="cards">
@@ -194,10 +202,10 @@ include('./controllers/conn.php');
                     <img src="./images/6.JPG" class="img-fluid">
                 </div>
                 <div class="book_description">
-                <h5 class="book_title" >Name of the book</h5>
-                <div class="bor"></div>
-                <p class="book_desc" >Keywords</p>
-            </div>
+                    <h5 class="book_title">Name of the book</h5>
+                    <div class="bor"></div>
+                    <p class="book_desc">Keywords</p>
+                </div>
             </div>
 
             <div class="cards">
@@ -205,10 +213,10 @@ include('./controllers/conn.php');
                     <img src="./images/6.JPG" class="img-fluid">
                 </div>
                 <div class="book_description">
-                <h5 class="book_title" >Name of the book</h5>
-                <div class="bor"></div>
-                <p class="book_desc" >Keywords</p>
-            </div>
+                    <h5 class="book_title">Name of the book</h5>
+                    <div class="bor"></div>
+                    <p class="book_desc">Keywords</p>
+                </div>
             </div>
 
             <div class="cards">
@@ -216,18 +224,170 @@ include('./controllers/conn.php');
                     <img src="./images/6.JPG" class="img-fluid">
                 </div>
                 <div class="book_description">
-                <h5 class="book_title" >Name of the book</h5>
-                <div class="bor"></div>
-                <p class="book_desc" >Keywords</p>
-            </div>
+                    <h5 class="book_title">Name of the book</h5>
+                    <div class="bor"></div>
+                    <p class="book_desc">Keywords</p>
+                </div>
             </div>
         </div>
     </div>
 
 
+    <div class="hor-border"></div>
+
+    <!-- Open_Mic_Panel -->
+    <div class="open_mic_panel">
+
+        <div class="open_mic_desc">
+
+            <div class="headings">
+                <div class="main_heading">
+                    <h1>Open-Mic</h1>
+                </div>
+            </div>
+
+            <br>
+
+
+            <div class="open_mic_desc_info">
+                <div class="open_mic_desc_info_key">
+                    <h3>Category:</h3>
+                </div>
+                <div class="open_mic_desc_info_value">
+                    <h4>Poem, Short Stories</h4>
+                </div>
+            </div>
+
+            <div class="open_mic_desc_info">
+                <div class="open_mic_desc_info_key">
+                    <h3>Date:</h3>
+                </div>
+                <div class="open_mic_desc_info_value">
+                    <h4>21 june</h4>
+                </div>
+            </div>
+
+            <div class="open_mic_desc_info">
+                <div class="open_mic_desc_info_key">
+                    <h3>Language:</h3>
+                </div>
+                <div class="open_mic_desc_info_value">
+                    <h4>Hindi,English</h4>
+                </div>
+            </div>
+
+            <div class="open_mic_desc_info">
+                <div class="open_mic_desc_info_key">
+                    <h3>Price:</h3>
+                </div>
+                <div class="open_mic_desc_info_value">
+                    <h4>99/-</h4>
+                </div>
+            </div>
+        </div>
 
 
 
+
+        <div class="open_mic_baner">
+
+            <div class="baner_image">
+                <img src="./images/17.JPG" alt="mic_banner">
+            </div>
+            <button type="button" class="btn btn-primary text-wrap">
+                Participate
+            </button>
+        </div>
+
+    </div>
+
+    <div class="upcomming-events">
+        <h2 class="text-center" id="heading">UPCOMMING EVENTS</h2>
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./images/7.JPG" class="d-block w-80" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/7.JPG" class="d-block w-80" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/7.JPG" class="d-block w-80" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="hor-border"></div>
+
+
+    <!-- Publish Panel -->
+    <div class="publish_panel">
+        <div class="publish_panel_baner">
+            <div class="publish_panel_baner_heading">
+                <h1>Publish<br>with Siruspress</h1>
+            </div>
+            <div class="publish_panel_baner_writing">
+                <br>
+                <p>PUBLISH YOUR DREAM,<br>
+                    LET US EXPLORE.
+                    <br><br>
+                    Struggling with how to publish a book?
+                    <br><br>
+                    Publish your book with India’s Fastest growing Marketing and
+                    Publishing Platform. Get your own individual specialists to make
+                    your soft cover and digital book with expert guidance.
+
+                </p>
+            </div>
+        </div>
+        <div class="publish_panel_desc">
+            <div class="publish_panel_desc_info">
+                <div class="publish_panel_desc_info_key">
+                    <h3>Starting:</h3>
+                </div>
+                <div class="publish_panel_desc_info_value">
+                    <h4>Date</h4>
+                </div>
+            </div>
+            <div class="publish_panel_desc_info">
+                <div class="publish_panel_desc_info_key">
+                    <h3>Category:</h3>
+                </div>
+                <div class="publish_panel_desc_info_value">
+                    <h4>Poem</h4>
+                </div>
+            </div>
+            <div class="publish_panel_desc_info">
+                <div class="publish_panel_desc_info_key">
+                    <h3>Price:</h3>
+                </div>
+                <div class="publish_panel_desc_info_value">
+                    <h4>Free</h4>
+                </div>
+            </div>
+            <div class="publish_panel_desc_info">
+                <div class="publish_panel_desc_info_key">
+                    <h3>Details:</h3>
+                </div>
+                <div class="publish_panel_desc_info_value">
+                    <h4>Details</h4>
+                </div>
+            </div>
+        <br>
+        <button type="button" class="btn btn-primary text-wrap">
+            Participate
+        </button>
+        </div>
+    </div>
 
 
     <!-- Footer -->
@@ -236,7 +396,8 @@ include('./controllers/conn.php');
         <div class="col-lg-5" id="left">
             <h1>ABOUT SIRSPRESS</h1>
             <p style="color: azure; font-size:larger;">SirusPress is online platform and community for
-                writers, readers and every creative bunch.</p>
+                writers, readers and every creative bunch.
+            </p>
         </div>
         <div class="col-lg-4" id="center">
             <h1>SUBSCRIBE TO OUR NEWSLETTER</h1>
@@ -267,11 +428,12 @@ include('./controllers/conn.php');
 
 
 
-    
+
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 
 
 </body>
+
 </html>
