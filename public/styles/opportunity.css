@@ -1,0 +1,403 @@
+#navbarNav{
+    justify-content: flex-end;
+}
+
+.navbar-nav{
+    width: 80%;
+    justify-content: space-evenly;
+}
+
+#navbar{
+    box-shadow: 0 2rem 1.5rem #121216;    
+    background-color: #25252d;
+    
+}
+
+#navbarDropdown{
+    color: azure;
+}
+
+.dropdown-menu {
+    background-color: rgba(28, 26, 59, 0.568);
+}
+
+.dropdown-item {
+    color: azure;
+}
+
+ body{
+    background-color: #25252d;
+ }
+
+
+ #front-pannel{
+    margin-top: 4rem;
+     position: relative;
+     
+ }
+
+#front-pannel .borders{
+   
+    position: absolute;
+    width: 100%;
+    right: 0;
+    left: 0;
+    top: 50%;
+    border-color: black;
+    z-index: 0;
+    
+}
+
+#pannel-border {
+    margin-top :.5rem;
+    margin-bottom :.5rem;
+}
+
+.content{
+    position:relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+   
+}
+
+.panel-card {
+    display: flex;
+    flex-direction: column;
+    color: blanchedalmond;
+}
+
+.panel-title {
+    text-align: center;
+}
+
+ .pannel-pic {
+    padding: 1rem;
+    background-color: rgba(24, 49, 88, 0.527);
+    
+} 
+
+.pannel-pic img {
+    height: 20rem;
+   
+    width:20rem;
+}
+
+.panel-card:hover {
+    transform: scale(1.15);
+}
+
+
+.hor-border {
+    width: 100%;
+    margin: 3rem 0;
+    border-top:#5773ff solid .5rem;
+    color: aliceblue;
+}
+
+.contest_panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headings {
+    background-color: #353e71;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    width: 40%;
+    color: azure;
+
+}
+
+.main_heading,
+.sub_heading {
+    width: fit-content;
+}
+
+.main_heading h1{
+    font-size: 3rem;
+    font-weight: 620;
+}
+
+.sub_heading h2 {
+    font-size: 2.5rem;
+    font-weight: 620;
+}
+
+.contest_desc {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+   
+}
+
+.contest_desc_info {
+    display: flex;
+    color: azure;
+    position: relative;
+    width: 100%;
+    padding-left: 8%;
+    border-bottom: azure .2rem solid; 
+}
+
+.contest_desc_info_key {
+    width: 45%;
+
+}
+
+.contest_desc_info_value {
+    width: 55%;
+
+}
+
+.contest_desc_info_value h4 {
+    font-weight: 400;
+}
+
+.btn {
+    width: fit-content;
+    border-radius: 1rem;
+    text-align: center;
+    align-self: center;
+    background-color:#5773ff ;
+    padding-bottom: 7px;
+}
+
+@media (max-width:1140px) {
+
+    .headings {
+        width: 60%;
+    }
+    .contest_desc {
+        width: 60%;
+    }
+    
+}
+
+@media (max-width:740px) {
+
+    .headings {
+        width: 90%;
+        padding: 1rem 0rem;
+    }
+    .contest_desc {
+        width: 90%;
+    }
+
+    .main_heading h1{
+        font-size: 2rem;
+        font-weight: 400;
+    }
+    
+    .sub_heading h2 {
+        font-size: 1.8rem;
+        font-weight: 400;
+    }
+
+    
+}
+
+
+
+.upcoming_contest_panel {
+    display: flex;
+    margin: 3rem 0;
+    width: 100%;
+    justify-content: center;
+
+}
+
+.upcoming_contest_panel .heading {
+   background-color: #404f9f;
+   color: azure;
+   font-size: 2rem;
+   display: flex;
+   align-items: center;
+   font-weight: 600;
+   padding: 1rem;
+   width: 25%;
+   text-align: center;
+
+}
+
+.upcoming_contest_dashboard {
+    display: flex;
+    background-color: #353e71;
+    padding: 1rem;
+    width: 45%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+}
+
+
+.upcoming_contest_dashboard::-webkit-scrollbar {
+    height: 8px;               /* width of the entire scrollbar */
+  }
+  
+.upcoming_contest_dashboard::-webkit-scrollbar-track {
+    background: #5773ff;        /* color of the tracking area */
+  }
+  
+.upcoming_contest_dashboard::-webkit-scrollbar-thumb {
+    background-color: #404f9f;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid #404f9f;  /* creates padding around scroll thumb */
+  }
+
+
+
+.cards {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.card-img {
+   width: 6.5rem;
+}
+
+.panel_dashboard img {
+    width: 100%;
+   
+}
+
+
+.book_description {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 100%;
+    
+}
+
+.book_title {
+    text-align: center;
+    justify-content: flex-end;
+    font-size: .7rem;
+    font-weight: 300;
+    margin-bottom:.2rem ;
+}
+
+.bor {
+    border-top: #5773ff solid .2rem;
+}
+
+.book_desc {
+    text-align: center;
+    font-size: .6rem;
+    font-weight: 300;
+    margin: .1rem 0 ;
+}
+
+@media (max-width:750px) {
+    .upcoming_contest_panel .heading {
+        width: 30%;
+    }
+
+    .upcoming_contest_dashboard {
+        width: 65%;
+    }
+
+}
+
+@media (max-width:580px) { 
+    .upcoming_contest_panel {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .upcoming_contest_panel .heading {
+        width: 50%;
+        margin-bottom: 1rem;
+    }
+
+    .upcoming_contest_dashboard {
+        width: 80%;
+    }
+
+}
+
+
+
+.foot {
+    background-color: #6a6a6f;
+    display: flex;
+    flex-direction: row;
+    margin-top: 3rem;
+    justify-content: space-around;
+    padding:1rem;
+}
+
+.foot #left {
+    padding-right: 2rem;
+}
+
+.foot #left,
+.foot #center,
+.foot #right {
+    padding: 3rem;
+    padding-bottom: 1rem;
+}
+
+.foot h1 {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: azure;
+}
+
+.foot .icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.foot .form-control, 
+.foot .form-control:focus, 
+.foot .form-control:active {
+    background: transparent;
+    border: none;
+    border-bottom: oldlace solid .1rem;
+    border-radius: 0;
+    width: min-content;
+    padding: .1rem;
+    margin: .3rem;
+}
+
+.foot .col-mb-6 {
+    display: flex;
+    flex-direction: row;
+       
+}
+
+@media (max-width:992px) {
+    .foot {
+        background-color: #6a6a6f;
+        display: flex;
+        flex-direction: column;
+        margin-top: 3rem;
+        justify-content: space-around;
+        padding:1rem;
+    }
+
+    .foot #center {
+        border-top: solid azure .1rem;
+        border-bottom: solid azure .1rem;
+    }
+
+    .foot #right {
+        align-self: center;
+    }
+}
+
+ 

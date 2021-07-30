@@ -4,25 +4,19 @@ include('./controllers/conn.php');
 
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book-Description</title>
-
+    <title>Opportunity</title>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./styles/book_description.css">
-    <!-- <script type="text/javascript" src="/public/scripts/dashboard.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="./styles/opportunity.css">
+    <script type="text/javascript" src="/public/scripts/opportunity.js"></script>
 
-    <!-- <meta name="google-signin-client_id" content="47139870778-55g0m8lpkk4p2pnhdbiv5j5tfhkurcau.apps.googleusercontent.com">
-  <script src="https://apis.google.com/js/platform.js" async defer></script> -->
 </head>
-
 <body>
 
     <!-- Navbar -->
@@ -87,70 +81,145 @@ include('./controllers/conn.php');
     </nav>
 
 
+    <!-- Front Panel -->
+    <div class="container-fluid" id="front-pannel">
 
-    <div class="main_section">
-        <div class="left_panel">
-            <div class="left_panel_heading">
-                <h1>FICTION, ADVENTURE</h1>
-            </div>
-            <div class="left_panel_body">
-                <div class="card">
-                    <div class="card-img">
-                        <img src="./images/6.JPG" class="img-fluid">
-                    </div>
-                    <div class="poem_description">
-                        <h5 class="poem_title">Name of the book</h5>
-                        <div class="bor"></div>
-                        <p class="poem_desc">Love, affection, bond, friends</p>
+
+
+        <div class="borders">
+            <div class="border-top border-bottom border-1" id="pannel-border" style=" left:0; right:0; position:absolute;">
+                <div class="border-top border-bottom border-3" id="pannel-border">
+                    <div class="border-top border-5" id="pannel-border">
                     </div>
                 </div>
-
             </div>
         </div>
-        <div class="right_panel">
-            <div class="right_panel_heading">
-                <h1>Name of the Book</h1>
-                <h3>Author</h3>
-            </div>
-            <br>
-            <div class="right_panel_body">
-                <div class="right_panel_body_desc">
-                    <div class="right_panel_body_desc_key">
-                        <h3>Details:</h3>
-                    </div>
-                    <div class="right_panel_body_desc_value">
-                        <p>It is a book about...</p>
-                    </div>
+        <div class="content">
+
+            <div class="panel-card">
+                <div class="pannel-pic">
+                    <img src="./images/2.JPG" class="img-fluid" alt="image 1">
                 </div>
-                <div class="right_panel_body_desc">
-                    <div class="right_panel_body_desc_key">
-                        <h3>Category:</h3>
-                    </div>
-                    <div class="right_panel_body_desc_value">
-                        <p>Novel</p>
-                    </div>
-                </div>
-                <div class="right_panel_body_desc">
-                    <div class="right_panel_body_desc_key">
-                        <h3>Summary:</h3>
-                    </div>
-                    <div class="right_panel_body_desc_value">
-                        <p>The story revolves revolves around 5 friends who venture into a adventure trip to Ladak</p>
-                    </div>
-                </div>
-                <div class="right_panel_body_desc">
-                    <div class="right_panel_body_desc_key">
-                        <h3>Cost:</h3>
-                    </div>
-                    <div class="right_panel_body_desc_value">
-                        <p>Free</p>
-                    </div>
+                <div class="panel-title">
+                    Contest Poster
                 </div>
             </div>
-            <br>
-            <div class="buttons">
-            <button type="button" class="btn btn-primary text-wrap">Read Now</button>
-            <button type="button" class="btn btn-primary text-wrap">Download</button>
+            <div class="panel-card">
+                <div class="pannel-pic">
+                    <img src="./images/3.JPG" class="img-fluid" alt="2">
+                </div>
+                <div class="panel-title">
+                    Open-Mic Poster
+                </div>
+            </div>
+            <div class="panel-card">
+                <div class="pannel-pic">
+                    <img src="./images/16.JPG" class="img-fluid" alt=".3.">
+                </div>
+                <div class="panel-title">
+                    Publish Poster 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hor-border"></div>
+
+    <div class="contest_panel">
+        <div class="headings">
+            <div class="main_heading"><h1>Ongoing Contest</h1></div>
+            <div class="sub_heading"><h2>"Contest Name"</h2></div>
+        </div>
+        <br>
+        <br>
+        <div class="contest_desc">
+            <div class="contest_desc_info">
+                <div class="contest_desc_info_key">
+                    <h3>Starting:</h3>
+                </div>
+                <div class="contest_desc_info_value">
+                    <h4>Date</h4>
+                </div>
+            </div>
+            <div class="contest_desc_info">
+                <div class="contest_desc_info_key">
+                    <h3>Category:</h3>
+                </div>
+                <div class="contest_desc_info_value">
+                    <h4>Poem</h4>
+                </div>
+            </div>
+            <div class="contest_desc_info">
+                <div class="contest_desc_info_key">
+                    <h3>Price:</h3>
+                </div>
+                <div class="contest_desc_info_value">
+                    <h4>Free</h4>
+                </div>
+            </div>
+            <div class="contest_desc_info">
+                <div class="contest_desc_info_key">
+                    <h3>Details:</h3>
+                </div>
+                <div class="contest_desc_info_value">
+                    <h4>Details</h4>
+                </div>
+            </div>
+        </div>
+        <br>
+        <button type="button" class="btn btn-primary text-wrap">
+            Participate
+        </button>
+        
+    </div>
+    
+    <div class="upcoming_contest_panel">
+        <div class="heading">
+            Upcoming Contest
+        </div>
+        <div class="upcoming_contest_dashboard">
+        <div class="cards">
+                <div class="card-img">
+                    <img src="./images/6.JPG" class="img-fluid">
+                </div>
+                <div class="book_description">
+                <h5 class="book_title" >Name of the book</h5>
+                <div class="bor"></div>
+                <p class="book_desc" >Keywords</p>
+            </div>
+            </div>
+
+            <div class="cards">
+                <div class="card-img">
+                    <img src="./images/6.JPG" class="img-fluid">
+                </div>
+                <div class="book_description">
+                <h5 class="book_title" >Name of the book</h5>
+                <div class="bor"></div>
+                <p class="book_desc" >Keywords</p>
+            </div>
+            </div>
+
+            <div class="cards">
+                <div class="card-img">
+                    <img src="./images/6.JPG" class="img-fluid">
+                </div>
+                <div class="book_description">
+                <h5 class="book_title" >Name of the book</h5>
+                <div class="bor"></div>
+                <p class="book_desc" >Keywords</p>
+            </div>
+            </div>
+
+            <div class="cards">
+                <div class="card-img">
+                    <img src="./images/6.JPG" class="img-fluid">
+                </div>
+                <div class="book_description">
+                <h5 class="book_title" >Name of the book</h5>
+                <div class="bor"></div>
+                <p class="book_desc" >Keywords</p>
+            </div>
             </div>
         </div>
     </div>
@@ -158,8 +227,10 @@ include('./controllers/conn.php');
 
 
 
-    
 
+
+
+    <!-- Footer -->
     <footer class="foot">
 
         <div class="col-lg-5" id="left">
@@ -196,9 +267,11 @@ include('./controllers/conn.php');
 
 
 
-
+    
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-</body>
 
+
+
+</body>
 </html>
