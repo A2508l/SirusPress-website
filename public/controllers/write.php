@@ -1,46 +1,47 @@
-<script src="../scripts/write.js"></script>
 <?php
    
     // Database connection
     include('conn.php');
 
-        // public $contents;
-        // public $book_name;
-        // public $author_name;
-        // public $author_id;
-        // public $book_id;
-        // public $genre;
-        // public $category;
-        // public $publish;
 
+    if(isset($_POST['check_save_btn'])) {
+        $book_name = $_POST['book_name'];
+        $sql = "SELECT * from writings where book_name = '{$book_name}'";
+         $query = mysqli_query($connection , $sql);
+        
+         // If query fails, show the reason 
+         if(!$query){
+            die("SQL query failed: " . mysqli_error($connection));
+         }
 
+         $rowCount = mysqli_num_rows($query);
+         if($rowCount > 0) {
+            echo"Book Name already taken. Please try another one!";
+            
+    }
+    else{
+        echo"Available!";
+    }
+}
     
 
     if(isset($_POST['save'])) {
         
 
         $book_name = $_POST['Book_Name'];
-        echo($book_name);
          // Query if book exists in db with other author
-         $sql = "SELECT * From writings WHERE book_name = '{$book_name}' ";
-         $query = mysqli_query($connection, $sql);
-         $rowCount = mysqli_num_rows($query);
- 
+        
+         $sql = "SELECT * from writings where book_name = '{$book_name}'";
+         $query = mysqli_query($connection , $sql);
+        
          // If query fails, show the reason 
          if(!$query){
             die("SQL query failed: " . mysqli_error($connection));
          }
 
-         if($rowCount > 0) {
-            
-            ?>
-            <script type="text/javascript">
-            Error_popup();
-            </script>
-            <?php
-            return;
-            }
-            else{
+         $rowCount = mysqli_num_rows($query);
+
+         if($rowCount == 0) {
 
                 $author_name = $_SESSION['name'] ;
                 $author_id = $_SESSION['id'];
@@ -54,7 +55,7 @@
                 }
                 $content = $_POST['content'];
 
-                $sql = " INSERT INTO writings ( author_id,book_name,author_name,genre,category,publish,content) VALUES ('{$author_id}', '{$book_name}', '{$author_name}', '{$genre}', '{$category}', '{$publish}', '{$content}')";
+                $sql = " INSERT INTO writings ( author_id,book_name,author_name,genre,category,publish,content) VALUES ('{$author_id}', '{$book_name}', '$author_name', '{$genre}', '{$category}', '{$publish}', '{$content}')";
                 $query = mysqli_query($connection, $sql);
 
                 if(!$query){
@@ -63,3 +64,4 @@
 
             }
     }
+    ?>
