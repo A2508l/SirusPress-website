@@ -23,7 +23,6 @@ include('./controllers/conn.php');
 </head>
 
 <body>
-
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg  navbar-dark " id="navbar">
         <div class="container-fluid">

@@ -72,12 +72,3 @@ function mypopup_open() {
 function mypopup_close() {
   document.getElementById("popup_form").style.display = "none";
 }
-
-function Error_popup () {
-  document.getElementById("error_popup").style.display = "block";
-  setTimeout(Error_popup_hide, 3000);
-}
-
-function Error_popup_hide () {
-  document.getElementById("error_popup").style.display = "none";
-}

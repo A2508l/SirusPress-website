@@ -24,6 +24,34 @@ if ($_SESSION == NULL) {
 
     <!-- <meta name="google-signin-client_id" content="47139870778-55g0m8lpkk4p2pnhdbiv5j5tfhkurcau.apps.googleusercontent.com">
   <script src="https://apis.google.com/js/platform.js" async defer></script> -->
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#Book_Name').keyup(function(e){
+    var book = $('#Book_Name').val(); 
+    // alert(book);
+    $.ajax({
+
+        type: "POST",
+        url: "./controllers/write.php",
+        data:{
+            "check_save_btn":1,
+            "book_name":book,
+        },
+        success:function (response) {
+            $('.error_popup').text(response);
+            $('.error_popup').fadeIn();
+            $('.error_popup').delay(500).fadeOut();
+        }
+
+    });   
+});      
+
+});
+</script> 
+<script type="text/javascript" src="./scripts/book_name_check.js"></script>  
+
 </head>
 
 <body>
@@ -90,6 +118,8 @@ if ($_SESSION == NULL) {
     </nav>
 
 
+  
+
 
     <div class="heading">
         <h1>WRITE</h1>
@@ -135,7 +165,7 @@ if ($_SESSION == NULL) {
 
         </div>
 
-
+        <div id="error_popup"></div>
 
         <div class="text_editor">
             <form name="compForm" method="post"  onsubmit="if(validateMode()){this.myDoc.value=oDoc.innerHTML;return true;}return false;">
@@ -217,12 +247,14 @@ if ($_SESSION == NULL) {
 
     <div class="popup_form" id="popup_form">
 
-        <form class="form" method="POST">
+        <form class="form" method="POST" id="form">
             <div class="form-content">
                 <div class="mb-3">
                     <label for="Book_Name" class="form-label">Book Name:</label>
                     <input type="text" class="form-control" name="Book_Name" id="Book_Name" aria-describedby="BookName" required>
-                    <div class="error_popup" id="error_popup"> The Book already exists! Please use another name</div>
+                    <div class="error_popup" id="error_popup"></div>
+                   
+
                 </div>
 
                 <div class="mb-3">
